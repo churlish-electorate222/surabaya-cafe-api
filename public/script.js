@@ -7,7 +7,6 @@
   const BASE = location.origin;
 
   // Set base URLs in code blocks
-  document.getElementById('base-url').textContent = BASE;
   document.getElementById('code-url-1').textContent = BASE + '/api/cafes';
   document.getElementById('code-url-curl').textContent = 'curl ' + BASE + '/api/cafes';
   document.getElementById('code-url-python').textContent = BASE + '/api/cafes';

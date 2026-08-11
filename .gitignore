@@ -10,7 +10,7 @@ node_modules/
 .env.example
 
 # Bot & scraper (private — not pushed to public repo)
-src/bot/
+src/
 data/candidates.json
 data/verification_report.json
 
