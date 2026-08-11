@@ -10,6 +10,8 @@
   document.getElementById('base-url').textContent = BASE;
   document.getElementById('code-url-1').textContent = BASE + '/api/cafes';
   document.getElementById('code-url-curl').textContent = 'curl ' + BASE + '/api/cafes';
+  document.getElementById('code-url-python').textContent = BASE + '/api/cafes';
+  document.getElementById('code-url-browser').textContent = BASE + '/api/cafes';
 
   // Fetch live stats
   fetch(BASE + '/api/stats')
@@ -59,6 +61,25 @@
           btn.classList.remove('copied');
         }, 1500);
       });
+    });
+  });
+
+  // Language tab switching
+  document.querySelectorAll('.lang-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      // Remove active from all tabs
+      document.querySelectorAll('.lang-tab').forEach(function (t) {
+        t.classList.remove('active');
+      });
+      // Remove active from all content
+      document.querySelectorAll('.lang-content').forEach(function (c) {
+        c.classList.remove('active');
+      });
+      // Activate clicked tab
+      tab.classList.add('active');
+      // Activate corresponding content
+      var lang = tab.getAttribute('data-lang');
+      document.getElementById('lang-' + lang).classList.add('active');
     });
   });
 })();
