@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surabaya Cafe API</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <!-- Masthead -->
+    <header>
+      <p class="kicker">OPEN DATA API</p>
+      <h1>Surabaya Cafe API</h1>
+      <p class="tagline">Data cafe aktif terverifikasi di Google Maps. Gratis, terbuka, tanpa syarat.</p>
+      <div class="stats" id="stats">
+        <span class="stat"><strong id="stat-total">--</strong> cafe aktif</span>
+        <span class="stat-sep">&middot;</span>
+        <span class="stat"><strong id="stat-areas">--</strong> wilayah</span>
+        <span class="stat-sep">&middot;</span>
+        <span class="stat">terakhir diperbarui <strong id="stat-date">--</strong></span>
+      </div>
+    </header>
+
+    <hr>
+
+    <!-- Cara pakai -->
+    <section>
+      <p class="section-label">01</p>
+      <h2>Cara Pakai</h2>
+
+      <div class="step">
+        <p class="step-num">1</p>
+        <div>
+          <p class="step-title">Salin base URL</p>
+          <div class="code-block">
+            <code id="base-url">Memuat...</code>
+            <button class="copy-btn" data-target="base-url">Salin</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-num">2</p>
+        <div>
+          <p class="step-title">Ambil seluruh data cafe</p>
+          <div class="code-block">
+            <pre><code><span class="kw">fetch</span>(<span class="str">'<span id="code-url-1">...</span>'</span>)
+  .<span class="kw">then</span>(r =&gt; r.<span class="kw">json</span>())
+  .<span class="kw">then</span>(data =&gt; <span class="kw">console</span>.<span class="kw">log</span>(data));</code></pre>
+            <button class="copy-btn" data-target="code-block-2">Salin</button>
+          </div>
+          <div class="code-block">
+            <pre><code id="code-block-2"><span class="kw">curl</span> <span id="code-url-curl">...</span></code></pre>
+            <button class="copy-btn" data-target="code-block-2">Salin</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <p class="step-num">3</p>
+        <div>
+          <p class="step-title">Filter hasil</p>
+          <table class="param-table">
+            <thead>
+              <tr><th>Parameter</th><th>Contoh</th><th>Keterangan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>area</code></td><td><code>?area=Surabaya Timur</code></td><td>Wilayah kota</td></tr>
+              <tr><td><code>search</code></td><td><code>?search=kopi tuku</code></td><td>Cari nama / alamat</td></tr>
+              <tr><td><code>category</code></td><td><code>?category=Coffee Shop</code></td><td>Jenis kafe</td></tr>
+              <tr><td><code>facility</code></td><td><code>?facility=wifi</code></td><td>Fasilitas</td></tr>
+              <tr><td><code>tag</code></td><td><code>?tag=wfc</code></td><td>Kebutuhan (wfc, meeting, santai)</td></tr>
+              <tr><td><code>sort</code></td><td><code>?sort=name_asc</code></td><td>Urutkan (name_asc, name_desc, area)</td></tr>
+              <tr><td><code>limit</code></td><td><code>?limit=20&page=1</code></td><td>Paginasi</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Endpoint -->
+    <section>
+      <p class="section-label">02</p>
+      <h2>Endpoint</h2>
+      <table class="endpoint-table">
+        <thead>
+          <tr><th>Method</th><th>Path</th><th>Fungsi</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/cafes</code></td><td>Semua cafe + filter</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/cafes/search?q=</code></td><td>Pencarian cepat</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/cafes/:id</code></td><td>Detail cafe by ID</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/areas</code></td><td>Daftar wilayah</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/tags</code></td><td>Daftar kebutuhan</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/facilities</code></td><td>Daftar fasilitas</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/stats</code></td><td>Statistik data</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/export/json</code></td><td>Download JSON</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/export/csv</code></td><td>Download CSV</td></tr>
+          <tr><td><span class="method get">GET</span></td><td><code>/api/info</code></td><td>Info API (JSON)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- Contoh respons -->
+    <section>
+      <p class="section-label">03</p>
+      <h2>Contoh Respons</h2>
+      <div class="code-block response-block">
+        <pre><code id="sample-response">Memuat contoh data...</code></pre>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Catatan -->
+    <section>
+      <p class="section-label">04</p>
+      <h2>Catatan</h2>
+      <ul class="notes">
+        <li>Setiap cafe memiliki status <code>verified</code> dan <code>gmaps_status</code>. Cafe bertanda <em>Permanently closed</em> di Google Maps otomatis tidak ada di dataset ini.</li>
+        <li>Data diperbarui secara berkali melalui pipeline scraping OpenStreetMap + verifikasi Google Maps otomatis.</li>
+        <li>Field <code>opening_hours</code>, <code>price_range</code>, dan <code>address</code> mungkin kosong jika Google Maps tidak menampilkannya. Data yang kosong bukan berarti cafe tidak ada.</li>
+        <li>Lisensi: MIT. Bebas dipakai untuk proyek apapun.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Surabaya Cafe API &middot; Open Data &middot; MIT License</p>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>

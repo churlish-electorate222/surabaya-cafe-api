@@ -1,0 +1,306 @@
+/* =============================================
+   Surabaya Cafe API — Dashboard
+   Editorial coffee: cream paper, ink, brown accent
+   ============================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --paper: #f6f1e7;
+  --ink: #1c1917;
+  --ink-soft: #44403c;
+  --ink-muted: #8a8178;
+  --coffee: #6f4e37;
+  --coffee-light: #a68a6b;
+  --rule: #d6cfc3;
+  --code-bg: #ece7da;
+  --tag-bg: #e8e2d5;
+}
+
+html {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+  line-height: 1.65;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+
+/* --- Typography --- */
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-top: 0.35rem;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--ink);
+}
+
+.kicker {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coffee);
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+/* --- Stats chips --- */
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.stat strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.stat-sep {
+  color: var(--rule);
+  font-size: 0.7rem;
+}
+
+/* --- Rules --- */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* --- Section label --- */
+
+.section-label {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--coffee-light);
+  margin-bottom: 0.3rem;
+}
+
+/* --- Steps --- */
+
+.step {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.step-num {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--coffee);
+  padding-top: 0.2rem;
+}
+
+.step-title {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* --- Code blocks --- */
+
+.code-block {
+  position: relative;
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.code-block pre code {
+  white-space: pre;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  background: var(--paper);
+  color: var(--ink-muted);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copy-btn:hover {
+  color: var(--coffee);
+  border-color: var(--coffee-light);
+}
+
+.copy-btn.copied {
+  color: var(--coffee);
+  border-color: var(--coffee);
+}
+
+/* Syntax colors */
+.kw { color: #7c3aed; }
+.str { color: #16a34a; }
+
+.response-block {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* --- Tables --- */
+
+.param-table,
+.endpoint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.param-table th,
+.endpoint-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+.param-table td,
+.endpoint-table td {
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.param-table code,
+.endpoint-table code {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  background: var(--tag-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+.method {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+
+.method.get {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* --- Notes --- */
+
+.notes {
+  list-style: none;
+  padding: 0;
+}
+
+.notes li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.notes li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--coffee-light);
+}
+
+.notes code {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  background: var(--tag-bg);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* --- Footer --- */
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  main { padding: 2rem 1rem 3rem; }
+  h1 { font-size: 1.8rem; }
+  .step { grid-template-columns: 1.5rem 1fr; }
+  .param-table, .endpoint-table { font-size: 0.78rem; }
+}
